@@ -36,9 +36,15 @@ pip install sundar-gap-stat
 Or install from source:
 
 ```bash
-git clone https://github.com/pvsundar/sundar_gap_stat.git
-cd sundar_gap_stat
+git clone https://github.com/pvsundar/sundargap_statistic.git
+cd sundargap_statistic
 pip install -e .
+```
+
+If you also want test dependencies:
+
+```bash
+pip install -e ".[test]"
 ```
 
 ## Quick Start
@@ -158,15 +164,14 @@ Comprehensive simulations demonstrate:
 
 ## Citation
 
-If you use this package in your research, please cite:
+If you use this package in your research, please cite the software and the original Gap Statistic paper:
 
 ```bibtex
-@article{balakrishnan2026sundar,
-  title={The Sundar-Tibshirani Gap Statistic: A Goodness-of-Fit Measure 
-         for Evaluating Any Cluster Solution},
-  author={Balakrishnan, P. V. Sundar},
-  journal={Journal of Marketing Analytics},
-  year={2026}
+@software{balakrishnan_sundar_gap_stat_2026,
+  author = {Balakrishnan, P. V. Sundar},
+  title  = {Sundar-Tibshirani Gap Statistic (sundar-gap-stat)},
+  year   = {2026},
+  url    = {https://github.com/pvsundar/sundargap_statistic}
 }
 ```
 
@@ -176,7 +181,7 @@ If you use this package in your research, please cite:
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file.
+MIT License; see [LICENSE](LICENSE).
 
 ## Author
 

@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sundar-gap-stat"
+version = "2.0.0"
+description = "Sundar-Tibshirani Gap Statistic for evaluating any cluster solution"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "P.V. Sundar Balakrishnan", email = "sundar@uw.edu"}
+]
+maintainers = [
+    {name = "P.V. Sundar Balakrishnan", email = "sundar@uw.edu"}
+]
+keywords = [
+    "clustering",
+    "cluster-analysis",
+    "gap-statistic",
+    "machine-learning",
+    "data-science",
+    "market-segmentation",
+    "customer-analytics",
+    "unsupervised-learning"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "scikit-learn>=1.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+examples = [
+    "matplotlib>=3.5.0",
+    "seaborn>=0.12.0",
+    "pandas>=1.4.0",
+    "palmerpenguins>=0.1.4",
+    "qatarcars>=0.3.0",
+]
+all = [
+    "sundar-gap-stat[dev,examples]"
+]
+
+[project.urls]
+Homepage = "https://github.com/pvsundar/sundar_gap_stat"
+Documentation = "https://github.com/pvsundar/sundar_gap_stat#readme"
+Repository = "https://github.com/pvsundar/sundar_gap_stat"
+Issues = "https://github.com/pvsundar/sundar_gap_stat/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sundar_gap_stat*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+#addopts = "-v --cov=sundar_gap_stat --cov-report=term-missing"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
